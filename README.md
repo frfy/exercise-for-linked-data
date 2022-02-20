@@ -1,4 +1,4 @@
-# Exercise for Linked Data
+# Exercises for Linked Data
 
 ## exercise-1:
 
@@ -34,7 +34,7 @@ File: [exercise-2.js](./src/exercise-2.js)
 The result for exercise-2:
 ![console result](./img/result2.png)
 
-## another edition for exercise 1 and 2:
+## Another edition for exercise 1 and 2:
 
 File: [edition-2.js](./src/edition-2.js)    
 Save jsonld data as a [jsonldData.txt](./data/jsonldData.txt) file.
