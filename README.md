@@ -1,4 +1,4 @@
-# Exercise for Web
+# Exercise for Linked Data
 
 ## exercise-1:
 
