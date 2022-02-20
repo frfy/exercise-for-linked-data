@@ -49,10 +49,11 @@ async function jsonldtoRDF(result){
     console.log('After formatting - N-quads:\n',nquads)
 
     // getting organisation information
-    const frame={ "@value":"@type",}
+    const frame={
+        '@type': 'http://xmlns.com/foaf/0.1/Organization',
+    }
     const framed = await jsonld.frame(jsonldresult, frame);
-    
     console.log('Organisation information:')
-    console.log(framed['@graph'][0]);
+    console.log(framed)
     console.log('Good Job! Task completed')
 }

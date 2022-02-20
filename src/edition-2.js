@@ -39,7 +39,7 @@ graph.add(org, FOAF('member') , gwen)
 $rdf.serialize(null, graph, gwen.uri, 'application/ld+json', (err, jsonldData) => {
     jsonldtoRDF(jsonldData)
 
-    fs.writeFile('jsonldData.txt', jsonldData,  function(err) {
+    fs.writeFile('./data/jsonldData.txt', jsonldData,  function(err) {
         if (err) {
             return console.error(err);
         }
@@ -56,16 +56,18 @@ async function jsonldtoRDF(result){
     console.log('After formatting - N-quads:\n',nquads)
 
     // getting organisation information
-    const frame={ "@value":"@type",}
-    const framed = await jsonld.frame(jsonldresult, frame);
-    
+    const frame_id={
+        '@id': 'https://new-u.tech',
+      }
+
+    const frame_mbox={
+        '@mbox': {
+            '@value': 'gwen@new-u.tech'
+        }
+    }
+    const framed = await jsonld.frame(jsonldresult, frame_mbox);
     console.log('Organisation information:')
-    console.log(framed['@graph'][0]);
-
-    console.log('Organisation information value:')
-    console.log(Object.values(framed['@graph'][0]));
-    
-
+    console.log(framed)
 }
 
 console.log('Good Job! Task completed')
