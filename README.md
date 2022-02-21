@@ -46,7 +46,6 @@ Save jsonld data as a [jsonldData.txt](./data/jsonldData.txt) file.
 Extract organization information with id 
 >frame_id={'@id': 'https://new-u.tech',}
 
-Extract organization information with mbox
->frame_mbox={'@mbox': {'@value': 'gwen@new-u.tech'}}
+
 
 ## Thank you

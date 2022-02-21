@@ -56,16 +56,17 @@ async function jsonldtoRDF(result){
     console.log('After formatting - N-quads:\n',nquads)
 
     // getting organisation information
+    // ID
     const frame_id={
         '@id': 'https://new-u.tech',
       }
 
-    const frame_mbox={
-        '@mbox': {
-            '@value': 'gwen@new-u.tech'
-        }
+    //type
+    const frame={
+        '@type': 'http://xmlns.com/foaf/0.1/Organization',
     }
-    const framed = await jsonld.frame(jsonldresult, frame_mbox);
+    
+    const framed = await jsonld.frame(jsonldresult, frame_id);
     console.log('Organisation information:')
     console.log(framed)
 }
